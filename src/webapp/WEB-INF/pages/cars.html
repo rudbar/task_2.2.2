@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+</head>
+<body>
+
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Model</th>
+        <th scope="col">Color</th>
+        <th scope="col">Series</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr th:each = "car: ${display2}">
+        <td th:text="${car.model}"></td>
+        <td th:text="${car.color}"></td>
+        <td th:text="${car.series}"></td>
+    </tr>
+    </tbody>
+</table>
+
+</body>
+</html>
